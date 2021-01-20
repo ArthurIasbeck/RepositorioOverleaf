@@ -1,0 +1,168 @@
+% ELEMENTOS PŔE-TEXTUAIS
+
+% CAPA
+\begin{center}
+	\Large
+
+	\includegraphics[width=0.15\linewidth]{fig/pretextuais/ufu} \\
+	\textsc{Universidade Federal de Uberlândia} \\
+	\textsc{Faculdade de Engenharia Mecânica} \\
+	\textsc{Programa de Pós-graduação em Engenharia Mecânica}
+
+	\vspace{3.5cm}
+
+	\textsc{\Huge Estudo comparativo de pacotes computacionais empregados na resolução de problemas de Controle Ótimo}
+
+	\vspace{3.5cm}
+
+	\textsc{Arthur Henrique Iasbeck}
+
+	\vspace{3.5cm}
+
+	\textsc{\large Uberlândia, MG \\ 2021}
+\end{center}
+
+% FOLHA DE ROSTO
+
+\imprimirfolhaderosto*
+
+% FICHA BIBLIOGRÁFICA
+
+\begin{fichacatalografica}
+	\sffamily
+	\vspace*{\fill}
+	\begin{center}
+		\fbox{\begin{minipage}[c][8cm]{13.5cm}
+			\small
+			\imprimirautor
+	
+			\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+			\imprimirlocal, \imprimirdata-
+	
+			\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.\\
+	
+			\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	
+			\hspace{0.5cm}
+			\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+			\imprimirdata.}\\
+	
+			\hspace{0.5cm}
+				1. Controle Ótimo.
+				2. PSOPT.
+				3. Falcon.
+				4. COPILOTS.
+				5. Otimização
+				I. Fran Sérgio Lobato.
+				II. Universidade Federal de Uberlândia.
+				III. Faculdade de Engenharia Mecânica.		
+		\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
+
+% FOLHA DE APROVAÇÃO
+
+\begin{folhadeaprovacao}
+
+ \begin{center}
+   {\ABNTEXchapterfont\large\imprimirautor}
+
+   \vspace*{\fill}\vspace*{\fill}
+   \begin{center}
+				\ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+			\end{center}
+			\vspace*{\fill}
+
+			\hspace{.45\textwidth}
+			\begin{minipage}{.5\textwidth}
+				\imprimirpreambulo
+			\end{minipage}%
+			\vspace*{\fill}
+	\end{center}
+    
+	Trabalho aprovado. \imprimirlocal, 8 de Fevereiro de 2021:
+
+	\assinatura{\textbf{\imprimirorientador} \\ Orientador - FEQ-UFU} 
+	\assinatura{\textbf{Aldemir Ap. Cavallini Junior} \\ FEMEC-UFU}
+	\assinatura{\textbf{Gustavo Mendes Platt} \\ EQA-FURG}
+  
+	\begin{center}
+		\vspace*{0.5cm}
+		{\large\imprimirlocal}
+  \par
+  {\large\imprimirdata}
+  \vspace*{1cm}
+	\end{center}
+
+\end{folhadeaprovacao}
+
+% DEDICATÓRIA
+
+\begin{dedicatoria}
+\vspace*{\fill}
+\centering
+\noindent
+\textit{Este trabalho é dedicado aos professores, sem os quais nenhuma ciência existiria.} \vspace*{\fill}
+\end{dedicatoria}
+
+% AGRADECIMENTOS
+
+%\begin{agradecimentos}
+%	\input{sec/agradecimentos}
+%\end{agradecimentos}
+
+% EPÍGRAFE
+
+%\begin{epigrafe}
+% \vspace*{\fill}
+%	\begin{flushright}
+%		\textit{``O que sabemos é uma gota, o que ignoramos, um oceano''.\\
+%		Isaac Newton}
+%	\end{flushright}
+%\end{epigrafe}
+
+% RESUMO
+
+\setlength{\absparsep}{18pt} % ajuste do espaçamento dos parágrados
+\begin{resumo}
+	\input{sec/resumo}
+\end{resumo}
+
+% ABSTRACT
+
+\begin{resumo}[Abstract]
+	\begin{otherlanguage*}{english}
+  		\input{sec/abstract}
+ 	\end{otherlanguage*}
+\end{resumo}
+
+% LISTA DE ILUSTRAÇÕES
+
+\renewcommand{\listfigurename}{Lista de figuras}
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% LISTA DE TABELAS
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% LISTA DE ABREVIATURAS
+
+\begin{siglas}
+	\input{sec/abreviaturas}
+\end{siglas}
+
+% LISTA DE SÍMBOLOS
+
+\begin{simbolos}
+	\input{sec/simbolos}
+\end{simbolos}
+
+% SUMÁRIO
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage

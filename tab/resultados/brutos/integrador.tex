@@ -1,0 +1,15 @@
+\begin{table}
+	\centering
+	\caption[Resultados obtidos a partir da resolução do estudo de caso em análise considerando $ N = N_m $]{Resultados obtidos a partir da resolução do estudo de caso em análise  considerando $ N = N_m $. Os melhores resultados obtidos e cada uma das métricas utilizadas estão destacados em verde.}
+	\label{tab:integrador:dadosBrutos}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		Método       & $N_m$                     & $J^*$                            & $t$ {[}$s${]}                   & $s_t$ {[}$s${]} & $n_{aval}$                & $\Delta c_{max}$ & $N_s$ & $N_s\%$                          \\ \hline
+		$PSOPT_t$    & 35                        & 28,09170                         & 0,31331                         & 0,00625         & 8                         & 6,41e-15         & 30    & \cellcolor[HTML]{32CB00}100,00\% \\ \hline
+		$PSOPT_h$    & \cellcolor[HTML]{32CB00}5 & \cellcolor[HTML]{32CB00}28,00000 & 0,05395                         & 0,00747         & 15                        & 4,44e-16         & 30    & \cellcolor[HTML]{32CB00}100,00\% \\ \hline
+		$PSOPT_l$    & \cellcolor[HTML]{32CB00}5 & \cellcolor[HTML]{32CB00}28,00000 & 0,03791                         & 0,00977         & \cellcolor[HTML]{32CB00}5 & 7,77e-16         & 27    & 90,00\%                          \\ \hline
+		$FALCON$     & 35                        & 28,09167                         & \cellcolor[HTML]{32CB00}0,03663 & 0,00279         & 6                         & 2,08e-16         & 30    & \cellcolor[HTML]{32CB00}100,00\% \\ \hline
+		$COPILOTS_t$ & 35                        & 28,09167                         & 0,52875                         & 0,01817         & 1404                      & 1,57e-13         & 30    & \cellcolor[HTML]{32CB00}100,00\% \\ \hline
+		$COPILOTS_h$ & \cellcolor[HTML]{32CB00}5 & \cellcolor[HTML]{32CB00}28,00000 & 0,18729                         & 0,01770         & 600                       & 3,05e-13         & 30    & \cellcolor[HTML]{32CB00}100,00\% \\ \hline
+	\end{tabular}
+\end{table}

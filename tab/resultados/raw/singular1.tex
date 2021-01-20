@@ -1,0 +1,15 @@
+\begin{table}
+	\centering
+	\caption[Métricas obtidas para o problema singular 1]{Métricas obtidas para o problema singular 1. Os melhores valores para $ N_m $, $ J^* $, $ t_p $, $ n_{aval} $ e $ N_s\% $ encontram-se destacados.}
+	\label{tab:singular1:raw}
+	\begin{tabular}{@{}ccccccccc@{}}
+		\toprule
+		Método       & $N_m$                              & $J^*$                                   & $t_p$ {[}$s${]}                         & $s_t$ {[}$s${]} & $n_{aval}$                         & $\Delta c_{max}$                         & $N_s$ & $N_s\%$                                  \\ \midrule
+		$PSOPT_t$    & 75                                 & 0,26850                                 & 16,30566                                & 0,26206         & 6140                               & 4,44e-12                                 & 22    & 73,33\%                                  \\
+		$PSOPT_h$    & 50                                 & 0,26838                                 & 3,28051                                 & 0,18163         & 951                                & 1,99e-07                                 & 22    & 73,33\%                                  \\
+		$PSOPT_l$    & 130                                & 0,26846                                 & 29,17814                                & 1,97563         & 429                                & 3,77e-08                                 & 24    & 80,00\%                                  \\
+		$FALCON$     & 75                                 & 0,26851                                 & {\color[HTML]{009901} \textbf{0,23411}} & 0,04632         & {\color[HTML]{009901} \textbf{49}} & 5,62e-08                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_t$ & 75                                 & 0,26850                                 & 22,39840                                & 0,50176         & 61812                              & 1,02e-09                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_h$ & {\color[HTML]{009901} \textbf{15}} & {\color[HTML]{009901} \textbf{0,26749}} & 3,43669                                 & 0,05187         & 16303                              & 3,82e-13 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\ \bottomrule
+	\end{tabular}
+\end{table}

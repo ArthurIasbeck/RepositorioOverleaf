@@ -1,0 +1,15 @@
+\begin{table}[!h]
+	\centering
+	\caption[Métricas  obtidas  para  o  problema  do pêndulo invertido]{Métricas  obtidas  para  o  problema  do pêndulo invertido. Os melhores $ N_m $, $ J^* $, $ t_p $, $ n_{aval} $ e $ N_s\% $ se encontram destacados.}
+	\label{tab:penduloInvertido:raw}
+	\begin{tabular}{@{}ccccccccc@{}}
+		\toprule
+		Método       & $N_m$                              & $J^*$                                    & $t_p$ {[}$s${]}                         & $s_t$ {[}$s${]} & $n_{aval}$                         & $\Delta c_{max}$                         & $N_s$ & $N_s\%$                                  \\ \midrule
+		$PSOPT_t$    & 83                                 & 58,93880                                 & 1,86743                                 & 0,18145         & 542                                & 4,32e-14                                 & 24    & 80,00\%                                  \\
+		$PSOPT_h$    & 26                                 & {\color[HTML]{009901} \textbf{58,80540}} & 0,59690                                 & 0,04756         & 221                                & 2,78e-14                                 & 28    & 93,33\%                                  \\
+		$PSOPT_l$    & {\color[HTML]{009901} \textbf{23}} & 60,16670                                 & 0,43817                                 & 0,01904         & 47                                 & 6,64e-14                                 & 21    & 70,00\%                                  \\
+		$FALCON$     & 80                                 & 58,94871                                 & {\color[HTML]{009901} \textbf{0,18535}} & 0,03597         & {\color[HTML]{009901} \textbf{34}} & 9,32e-11                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_t$ & 80                                 & 58,94871                                 & 16,46423                                & 0,08403         & 27044                              & 1,55e-15 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_h$ & 26                                 & 58,80543                                 & 17,42163                                & 0,63533         & 34017                              & 2,28e-15                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\ \bottomrule
+	\end{tabular}
+\end{table}

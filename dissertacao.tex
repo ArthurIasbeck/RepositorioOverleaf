@@ -1,0 +1,76 @@
+\input{aux/preambulo}
+
+% INÍCIO DO DOCUMENTO
+\begin{document}
+
+% CONFIGURAÇÕES INICIAIS
+% Seleciona o idioma do documento 
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ELEMENTOS PRÉ-TEXTUAIS
+\input{sec/pretextuais}
+
+% ELEMENTOS TEXTUAIS
+\textual 
+
+% INTRODUÇÃO
+\chapter{Introdução}		
+\input{sec/introducao}
+
+% REVISÃO BIBLIOGRÁFICA
+\chapter{Revisão bibliográfica}
+\label{sec:revisao}
+\input{sec/revisao}
+
+% METODOLOGIA
+\chapter{Metodologia}
+\label{sec:metodologia}
+\input{sec/metodologia}
+
+% RESULTADOS E DISCUSSÕES
+\chapter{Resultados e discussões}
+\label{sec:resultados}
+\input{sec/resultados}
+
+% CONCLUSÕES 
+\chapter{Conclusão}
+\label{sec:conclusoes}
+\input{sec/conclusoes}
+
+% ELEMENTOS PÓS-TEXTUAIS
+\postextual
+
+% REFERÊNCIAS BIBLIOGRÁFICAS
+\bibliography{aux/referencias}
+
+% APÊNDICES
+%\begin{apendicesenv}
+%	\partapendices % página inicial do apêndice
+%	
+%	\chapter{Problemas singulares}
+%	\input{sec/apendices/singulares}
+%	
+%	\chapter{Introdução à programação não linear}
+%	\input{sec/introducaoNLP}
+%	
+%	\chapter{Instalação dos pacotes utilizados}
+%	\input{sec/instalacao}
+%	
+%	\chapter{$ COPILOTS $: Manual do usuário}
+%	\input{sec/manualCopilots}
+%	
+%\end{apendicesenv}
+	
+%% ANEXOS
+%\begin{anexosenv}
+%	\partanexos % página inicial dos anexos
+%	
+%	% ANEXO 
+%	\chapter{Anexo}
+%
+%\end{anexosenv}
+
+\end{document}

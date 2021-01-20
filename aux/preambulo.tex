@@ -1,0 +1,146 @@
+% abnTeX2: Modelo de Trabalho Academico (tese de doutorado, dissertacao de
+% mestrado e trabalhos monograficos em geral) em conformidade com 
+% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
+% Apresentacao
+
+% CONFIGURAÇÕES DO DOCUMENTO
+
+\documentclass[
+	12pt, % tamanho da fonte
+	openright, % capítulos começam em pág ímpar 
+	twoside, % impressão frente e verso (oposto a oneside)
+	a4paper, % tamanho do papel. 
+	english, % idioma adicional para hifenização
+	french, % idioma adicional para hifenização
+	spanish, % idioma adicional para hifenização
+	brazil, % o último idioma é o principal do documento
+	table, xcdraw % opções de xcolor para colorir tabelas
+	]{abntex2}
+
+% PACOTES BÁSICOS
+
+\usepackage{times} % Usa a fonte Times New Roman
+\usepackage[T1]{fontenc} % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc} % Codificação de acentos
+\usepackage{indentfirst} % Indenta o primeiro parágrafo 
+\usepackage{color} % Controle das cores
+\usepackage{graphicx} % Inclusão de gráficos
+\usepackage{microtype} % Para melhorias de justificação
+
+% PACOTES ADICIONADOS PELO AUTOR
+
+\usepackage{amsmath} % Escrita matemática
+\usepackage{amssymb} % Escrita matemática
+\usepackage[textsize=tiny, disable]{todonotes} % Adição de notas 
+\usepackage{booktabs} % Inserção de tabelas com estilo de livro
+\usepackage[font=small]{caption} % Inserção de legendas em minipages
+\usepackage{icomma} % Correção da distância entre a vírgula e os números decimais
+\usepackage{bm} % Emprego de símbolos negritos em equações
+\usepackage{nccmath} % Controle do tamanho de frações dentro de frações
+\usepackage{gensymb} % Inserção do símbolo de grau
+\usepackage{tabu} % Criação de tabelas com quebra de linha automática
+
+% COMANDOS ADICIONADOS PELO AUTOR
+
+\setcounter{MaxMatrixCols}{20} % Delimita o número máximo de colunas em uma matrix
+
+\raggedbottom % Previne que o texto se expanda pra preencher a página
+
+% Definição do ponto para produto escalar
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.7}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+% PACOTES PARA CITAÇÕES
+
+\usepackage[brazilian,hyperpageref]{backref} % Hipertexto nas referências
+\usepackage[alf, bibjustif]{abntex2cite} % Citações no padrão ABNT
+
+% CONFIGURAÇÃO DO PACOTE backref
+
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+\renewcommand{\ABNTEXchapterfont}{\scshape\fontfamily{cmr}\fontseries{b}\selectfont}
+
+% INFORMAÇÕES PARA CAPA E FOLHA DE ROSTO
+
+\titulo{Estudo comparativo de pacotes computacionais empregados na resolução de problemas de Controle Ótimo}
+\autor{Arthur Henrique Iasbeck}
+\local{Uberlândia, MG}
+\data{2021}
+\orientador{Fran Sérgio Lobato}
+\instituicao{%
+  Universidade Federal de Uberlândia (UFU)
+  \par
+  Faculdade de Engenharia Mecânica
+  \par
+  Programa de Pós-Graduação em Engenharia Mecânica}
+\tipotrabalho{Dissertação (Mestrado)}
+\preambulo{\textbf{Dissertação} apresentada ao Programa de Pós-graduação em Engenharia Mecânica da Universidade Federal de Uberlândia como parte dos requisitos para obtenção do título de \textbf{Mestre em Engenharia Mecânica}. \newline \newline \textbf{Área de Concentração}: Mecânica dos Sólidos e Vibrações. \newline \textbf{Linha de Pesquisa}: Projetos de Sistemas Mecânicos.}
+
+% CONFIGURAÇÕES GERAIS
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true, % false: links em caixas; true: links coloridos
+    	linkcolor=blue, % cor dos links internos
+    	citecolor=blue, % cor dos links da bibliografia
+    	filecolor=magenta, % cor dos links para arquivos
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+% Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas em um página em branco
+\makeatletter
+\setlength{\@fptop}{5pt} % Set distance from top of page to first float
+\makeatother
+
+% Possibilita criação de Quadros e Lista de quadros.
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% Configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp}
+
+% ESPAÇAMENTO ENTRE LINHAS E PARÁGRAFOS
+
+% O tamanho do parágrafo 
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Compila o indice
+\makeindex

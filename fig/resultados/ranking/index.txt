@@ -1,0 +1,22 @@
+all - Contém a comparação entre todos os métodos
+
+1 - SIMPOPT_t x SIMPOPT_h : Todos utilizando o fmincon. Comparação entre Trapezoidal, Hermite-Simpson
+
+2 - PSOPT_t x PSOPT_h : Todos utilizando o IPOPT. Comparação entre Trapezoidal, Hermite-Simpson
+
+3 - PSOPT_t x PSOPT_h x PSOPT_l : Todos utilizam o IPOPT. Comparação entre Trapezoidal, Hermite-Simpson e Legendre
+
+4 - PSOPT_t x FALCON : Ambos fazem uso da colocação trapezoidal e do IPOPT. Verificação da influência da utilização de derivadas analíticas
+
+5 - PSOPT_t x SIMPOPT_t : Ambos utilizam a colocação trapezoidal e nenhum deles faz uso de derivadas analíticas. Comparação entre IPOPT e fmincon. 
+
+6 - PSOPT_h x SIMPOPT_h : Ambos utilizam a colocação Hermite-Simpson e nenhum deles faz uso de derivadas analíticas. Comparação entre IPOPT e fmincon. 
+
+--------------------------------------------------
+
+1 - Trapezoidal x Hermite-Simpson
+2 - Trapezoidal x Hermite-Simpson
+3 - Trapezoidal x Hermite-Simpson x Legendre
+4 - Influência das derivadas analíticas
+5 - IPOPT x fmincon
+6 - IPOPT x fmincon

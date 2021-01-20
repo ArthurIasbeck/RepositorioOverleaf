@@ -1,0 +1,15 @@
+\begin{table}
+	\centering
+	\caption[Métricas obtidas para o problema do foguete]{Métricas obtidas para o problema do lançamento de um foguete. Os melhores $ N_m $, $ J^* $, $ t_p $, $ n_{aval} $ e $ N_s\% $ se encontram destacados.}
+	\label{tab:foguete:raw}
+	\begin{tabular}{@{}ccccccccc@{}}
+		\toprule
+		Método       & $N_m$                             & $J^*$                                       & $t_p$ {[}$s${]}                         & $s_t$ {[}$s${]}                         & $n_{aval}$                          & $\Delta c_{max}$                         & $N_s$ & $N_s\%$                                  \\ \midrule
+		$PSOPT_t$    & 27                                & {\color[HTML]{009901} \textbf{-7534,94000}} & 4,82663                                 & 0,14216                                 & {\color[HTML]{009901} \textbf{331}} & 1,35e-08                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$PSOPT_h$    & 14                                & -7532,49000                                 & 2,34095                                 & 0,12260 & 364                                 & 1,35e-08                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$PSOPT_l$    & {\color[HTML]{009901} \textbf{9}} & -7532,18000                                 & {\color[HTML]{009901} \textbf{1,88649}} & 0,14480                                 & 475                                 & 2,55e-10 & 29    & 96,67\%                                  \\
+		$FALCON$     & -                                 & -                                           & -                                       & -                                       & -                                   & -                                        & -     & -                                        \\
+		$COPILOTS_t$ & -                                 & -                                           & -                                       & -                                       & -                                   & -                                        & -     & -                                        \\
+		$COPILOTS_h$ & -                                 & -                                           & -                                       & -                                       & -                                   & -                                        & -     & -                                        \\ \bottomrule
+	\end{tabular}
+\end{table}

@@ -1,0 +1,15 @@
+\begin{table}[h!]
+	\centering
+	\caption[Métricas obtidas para o problema do estacionamento]{Métricas obtidas para o problema do estacionamento. Os melhores $ N_m $, $ J^* $, $ t_p $, $ n_{aval} $ e $ N_s\% $ se encontram destacados.}
+	\label{tab:estacionamento:raw}
+	\begin{tabular}{@{}ccccccccc@{}}
+		\toprule
+		Método       & $N_m$                              & $J^*$                                   & $t_p$ {[}$s${]}                         & $s_t$ {[}$s${]} & $n_{aval}$                          & $\Delta c_{max}$                         & $N_s$ & $N_s\%$                                 \\ \midrule
+		$PSOPT_t$    & 60                                 & 8,41355                                 & 11,41652                                & 0,12859         & 1293                                & 1,19e-11                                 & 16    & 53,33\%                                 \\
+		$PSOPT_h$    & 45                                 & 9,57334                                 & 8,80915                                 & 0,09271         & 775                                 & 6,11e-12                                 & 9     & 30,00\%                                 \\
+		$PSOPT_l$    & 40                                 & 7,53479                                 & 10,46420                                & 0,21091         & 413                                 & 1,62e-14                                 & 16    & 53,33\%                                 \\
+		$FALCON$     & 20                                 & 7,58130                                 & {\color[HTML]{009901} \textbf{1,03363}} & 0,02386         & {\color[HTML]{009901} \textbf{214}} & 1,72e-10                                 & 27    & {\color[HTML]{009901} \textbf{90,00\%}} \\
+		$COPILOTS_t$ & 30                                 & 7,53996                                 & 26,18497                                & 1,52493         & 24786                               & 2,00e-15 & 12    & 40,00\%                                 \\
+		$COPILOTS_h$ & {\color[HTML]{009901} \textbf{10}} & {\color[HTML]{009901} \textbf{7,52486}} & 6,74175                                 & 0,09554         & 11936                               & 5,37e-12                                 & 7     & 23,33\%                                 \\ \bottomrule
+	\end{tabular}
+\end{table}

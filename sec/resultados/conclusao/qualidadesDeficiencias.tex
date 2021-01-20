@@ -1,0 +1,97 @@
+Nessa seção são listadas algumas das principais qualidades e deficiências atribuídas a cada um dos pacotes avaliados. Os atributos listados a seguir foram verificados no desenvolvimento do presente trabalho e vale ressaltar que alguns deles são subjetivos e não podem ser devidamente quantificados. 
+
+\subsubsection{PSOPT: Principais qualidades}
+\begin{itemize}
+	\item O $PSOPT$ dispõe de uma série de funções auxiliares bastante úteis para implementação de interpolações em 1D e 2D, computação dos perfis de estados e controles a partir dos valores assumidos pelos mesmos nos nós de colocação, e operações matemáticas como o produto escalar e o produto vetorial;
+	
+	\item O $PSOPT$ é desenvolvido com base na orientação a objetos e concentra em um único objeto todos os dados referentes à última execução;
+	
+	\item Uma quantidade enorme de exemplos pode ser encontrada no código fonte do $PSOPT$ e na documentação associada ao mesmo;
+	
+	\item Tanto o $PSOPT$ quanto as ferramentas empregadas pelo mesmo são gratuitas e de código aberto.
+\end{itemize}
+
+\subsubsection{PSOPT: Principais deficiências}
+\begin{itemize}
+	\item A implementação de um estudo de caso depende da definição de diversas variáveis e funções que são definidas em um único arquivo. Desta forma, pode ser necessário escrever arquivos consideravelmente extensos, com quase 1000 linhas, o que muitas vezes torna a edição e depuração dos códigos contidos nesses arquivos uma tarefa complexa;
+	
+	\item Para que uma análise de sensibilidade seja realizada, é necessário que o mesmo estudo de caso seja resolvido inúmeras vezes, o que nem sempre pode ser feito manualmente. Assim sendo, costuma-se modificar os códigos empregados na resolução de um dado estudo de caso inserindo laços que possibilitam que o mesmo código execute inúmeras vezes. No entanto, não é possível empregar essa estratégia no caso do $PSOPT$, uma vez que funções de configuração presentes na função principal (\texttt{psopt\_level1\_setup} e \texttt{psopt\_level2\_setup}) podem ser chamadas uma única vez. Assim sendo, para que uma análise de sensibilidade seja realizada empregando-se o $PSOPT$ é necessário empregar \textit{shell scripts};
+	
+	\item O manual do usuário não informa como acessar o número de avaliações associado a uma dada solução. Para acessar essa informação, é necessário buscar no código fonte pela estrutura na qual a mesma é armazenada. Essa estrutura chama-se \\ \texttt{solution.mesh\_stats[0].n\_obj\_evals}, e encontrá-la não é uma tarefa fácil;
+	
+	\item O usuário não pode escolher onde são salvos os resultados da última execução, sendo todos salvos na pasta onde o arquivo principal é executado;
+	
+	\item O valor da violação das restrições não é disponibilizado ao usuário em nenhuma das estruturas do $PSOPT$. Esse valor é apresentado na tela após a execução do IPOPT porém não pode ser acessado ou armazenado em um arquivo,  o que dificulta a implementação de análises de sensibilidade automáticas;
+	
+	\item Quando um PCO é resolvido empregando-se a colocação Hermite-Simpson, não são disponibilizados ao usuário os valores assumidos pelos controles nos nós intermediários. Vale ressaltar que esses valores são variáveis de projeto e não podem ser calculados. A função \texttt{get\_interpolated\_control}, que aparentemente serviria para computação das trajetórias de controle, é apenas citada na documentação, sem que qualquer exemplo seja fornecido;
+	
+	\item Não é implementada pelo $PSOPT$ qualquer tipo de verificação das entradas do usuário, o que pode levar a erros de falha de segmentação de origem indeterminada.
+\end{itemize}
+
+\subsubsection{FALCON: Principais qualidades}
+\begin{itemize}
+	\item O $FALCON$ computa as derivadas analíticas da função objetivo e das restrições por meio do pacote \textit{Symbolic Math} do Matlab\textsuperscript{\textregistered}, e as converte em arquivos .mex baseados em C/C++, o que possibilita um aumento considerável no desempenho do pacote;
+	
+	\item O $FALCON$ cria e pré-preenche de forma automática as funções que servem de base à implementação do PCO caso as mesmas ainda não tenham sido criadas. Essas funções possibilitam, por exemplo, a definição da função objetivo, da dinâmica do sistema, e das restrições associadas aos estados e controles;
+	
+	\item O desenvolvedores do $FALCON$ prestam um suporte bastante satisfatório aos usuários do pacote, sanando as dúvidas enviadas pelos mesmos em questão de horas;
+	
+	\item O $FALCON$ é escrito em Matlab\textsuperscript{\textregistered}, o que possibilita que o usuário faça uso das diversas ferramentas disponibilizadas nativamente nesse ambiente para implementação de interpolações bidimensionais, leitura e escrita de arquivos, criação de gráficos, operações com matrizes, dentre muitas outras;
+	
+	\item O $FALCON$ possibilita que restrições pontuais, que atuam em um único nó de colocação, sejam definidas.
+\end{itemize}
+
+\subsubsection{FALCON: Principais deficiências}
+\begin{itemize}
+	\item O $FALCON$ é um pacote de código fechado, o que impossibilita muitas vezes que o usuário depure alguns tipos específicos de erros ou que modifique o código fonte do $FALCON$ se necessário;
+	
+	\item O guia do usuário do $FALCON$ não traz quaisquer instruções acerca da definição de uma função custo genérica. Existem métodos chamados \texttt{addNewLagrangeCost} e \texttt{addNewMayerCost} desenvolvidos para esse fim, mas o guia do usuário não traz instruções de como utilizá-los;
+	
+	\item O guia do usuário do $FALCON$ não traz instruções acerca da definição dos palpites iniciais para os estados ou para os controles;
+	
+	\item O guia do usuário do $FALCON$ não traz quaisquer esclarecimentos acerca da implementação de problemas multifásicos que tenham dinâmicas distintas associadas a cada fase;
+	
+	\item O guia do usuário do $FALCON$ não traz qualquer informação acerca de como o usuário deve proceder para implementar PCOs que possuam um comportamento dinâmico descrito por equações que não podem ser derivadas, como é o caso do PCO introduzido na Seção \ref{sec:resultados:uav}. Vale ressaltar que o procedimento em questão não é nem um pouco trivial;
+	
+	\item Há muitas situações em que o Matlab\textsuperscript{\textregistered} fecha durante a execução do $FALCON$ devido a algum erro no processo de otimização ocasionado, por exemplo, pela presença de descontinuidades na dinâmica do sistema ou nas restrições. No entanto, o pacote não possui meios de informar o usuário a respeito do erro que ocasionou o encerramento da execução, o que obriga o usuário a iniciar um processo de depuração demorado e, muitas vezes, tedioso;
+	
+	\item O $FALCON$ não possui uma comunidade ativa que se comunica por meio de fóruns ou grupos. Logo, quando algum erro inesperado é verificado pelo usuário, faz-se necessário  entrar em contato com os desenvolvedores do pacote;
+	
+	\item Já foi dito que a computação da dinâmica e das restrições é baseada na implementação de arquivos de extensão \texttt{.mex}, gerados com base em funções escritas em arquivos Matlab\textsuperscript{\textregistered} de extensão \texttt{.m}. Esse comportamento dificulta consideravelmente a depuração dos códigos escritos para computação das dinâmicas e restrições, uma vez que as funções \texttt{.m} de fato escritas pelo usuário não são executadas, a não ser que o pacote \textit{coder}, que o Matlab\textsuperscript{\textregistered} emprega na geração dos arquivos \texttt{.mex}, seja desabilitado;
+	
+	\item Para que o $FALCON$ seja empregado na resolução de um problema multifásico, é necessário que o usuário defina uma função distinta para representar a dinâmica associada a cada fase, a não ser que a dinâmica se mantenha inalterada ao longo do tempo. De forma geral, à medida que o número de fases cresce, o número de funções a serem declaradas aumenta consideravelmente;
+	
+	\item A definição das restrições entre as fases de um PCO multifásico é um processo consideravelmente complexo;
+	
+	\item Não é possível interromper manualmente o processo de otimização sem que o Matlab\textsuperscript{\textregistered} seja encerrado.
+\end{itemize}
+
+\subsubsection{COPILOTS: Principais qualidades}
+\begin{itemize}
+	\item O $COPILOTS$ é um pacote gratuito e de código aberto;
+	
+	\item O $COPILOTS$ possui sintaxe intuitiva e foi desenvolvido para usuários com pouca ou nenhuma experiência na implementação computacional de PCOs;
+	
+	\item O $COPILOTS$ possibilita que, por meio da execução de um único comando, sejam criados, e já parcialmente preenchidos, os \textit{scripts} a serem utilizados na estruturação do PCO, guiando o usuário iniciante;
+	
+	\item O $COPILOTS$ apresenta uma sintaxe algébrica próxima à da formulação de Bolza, o que simplifica a implementação do PCO;
+	
+	\item O $COPILOTS$ possibilita que PCOs sejam implementados e resolvidos empregando-se poucas linhas de código;
+	
+	\item O $COPILOTS$ possibilita que as trajetórias de estados e controles sejam computadas de forma automática a partir dos valores assumidos por $\mathbf{x}(t)$ e $\mathbf{u}(t)$ em cada nó de colocação. Além disso, é possível que representações gráficas dessas trajetórias sejam apresentadas ao usuário ao fim da execução, também de forma automática;
+	
+	\item Todos os dados referentes à execução e à resolução de um dado PCO são salvos de forma automática e organizados em uma única pasta;
+	
+	\item O $COPILOTS$ possibilita que o usuário defina um tempo máximo de execução.
+\end{itemize}
+
+\subsubsection{COPILOTS: Principais deficiências}
+\begin{itemize}
+	\item O $COPILOTS$ faz uso da função \texttt{fmincon} para resolução de PPNLs; 
+	
+	\item O aumento do número de nós de colocação ocasiona um crescimento vertiginoso nos tempos de execução e no número de avaliações da função objetivo associados ao $COPILOTS$; 
+	
+	\item O $COPILOTS$ não possibilita a inserção de parâmetros genéricos na formulação do PCO, o que significa que esse pacote não pode ser empregado na estimação de modelos de sistemas dinâmicos;
+	
+	\item Não é possível resolver PCOs multifásicos empregando-se o $COPILOTS$.
+\end{itemize}

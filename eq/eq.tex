@@ -1,0 +1,519 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[textsize=tiny]{todonotes}
+\usepackage{bm} % negrito
+\usepackage{nccmath} % frações grandes
+\usepackage{gensymb} % grau
+
+% produto escalar grande
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.7}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+
+
+\begin{document}
+	
+	% Singular 1
+	
+	\section{Singular 1}
+	
+	Função custo:
+	\begin{equation}
+		J = x_3(t_f)
+	\end{equation}
+	
+	Dinâmica: 
+	\begin{equation}
+		\begin{gathered}
+			\dot{x}_1(t) = x_2(t) \\
+			\dot{x}_2(t) = u(t) \\
+			\dot{x}_3(t) = x_1^2(t)
+		\end{gathered}
+	\end{equation}
+
+	Estados e controles:
+	\begin{equation}
+		x(t) = \begin{bmatrix} x_1(t) & x_2(t) & x_3(t) \end{bmatrix}^T
+	\end{equation}
+
+	Estado inicial:
+	\begin{equation}
+		\begin{gathered}
+			x_1(0) = 0 \\
+			x_2(0) = 1 \\
+			x_3(0) = 0 
+		\end{gathered}
+	\end{equation}
+
+	Restrições de caminho:
+	\begin{equation}
+		-1 \leq u(t) \leq 1
+	\end{equation}
+
+	% Singular 2
+	
+	\section{Singular 2}
+	
+	Função custo:
+	\begin{equation}
+		J = x_3(t_f)
+	\end{equation}
+	
+	Dinâmica: 
+	\begin{equation}
+		\begin{gathered}
+			\dot{x}_1(t) = x_2(t) \\
+			\dot{x}_2(t) = u(t) \\
+			\dot{x}_3(t) = x_1^2(t) + x_2^2(t)
+		\end{gathered}
+	\end{equation}
+
+	Estados e controles:
+	\begin{equation}
+		x(t) = \begin{bmatrix} x_1(t) & x_2(t) & x_3(t) \end{bmatrix}^T
+	\end{equation}
+	
+	Estado inicial:
+	\begin{equation}
+		\begin{gathered}
+			x_1(0) = 0 \\
+			x_2(0) = 1 \\
+			x_3(0) = 0 
+		\end{gathered}
+	\end{equation}
+	
+	Restrições de caminho:
+	\begin{equation}
+		-1 \leq u(t) \leq 1
+	\end{equation}
+	
+	% Pêndulo Invertido 
+	
+	\section{Pendulo Invertido}
+	
+	Função custo:
+	\begin{equation}
+		J = \int_{0}^{t_f} F^2(t) dt
+	\end{equation}
+	
+
+	Dinâmica: 
+	\begin{equation}
+		\begin{gathered}
+			\dot{d}(t) = v(t) \\
+			\dot{\theta}(t) = \omega(t) \\
+			\dot{v}(t) = \frac{l \, m_2 \, \omega^2(t) \, sen \big(\theta(t)\big) + F(t) + m_2 \, g \, cos \big(\theta(t)\big) \, sen\big(\theta(t)\big)}{m_1 + m_2 \big[1 - cos^2 \big(\theta(t) \big)\big]} \\
+			\dot{\omega}(t) = -\frac{l \, m_2 \, \omega^2(t) \, sen\big(\theta(t)\big) \, cos\big(\theta(t)\big) + F(t) \, cos\big( \theta(t) \big) + (m_1 + m_2) g \, sen\big(\theta(t)\big)}{l \, m_1 + l \, m_2 \big[1 - cos^2\big(\theta(t)\big) \big]}
+		\end{gathered}
+	\end{equation}
+	
+	Estados e controles:
+	\begin{equation}
+		x(t) = \begin{bmatrix} d(t) & \theta(t) & v(t) & \omega(t) \end{bmatrix}^T
+	\end{equation}
+	
+	Estado inicial:
+	\begin{equation}
+		\begin{gathered}
+			d(0) = 0 \, \text{m} \\
+			\theta(0) = 0 \, \text{rad}\\
+			v(0) = 0 \, \text{m/s}\\
+			\omega(0) = 0 \, \text{rad/s}
+		\end{gathered}
+	\end{equation}
+	
+	Estado final:
+	\begin{equation}
+		\begin{gathered}
+			d(t_f) = d_f \\
+			\theta(t_f) = \theta_f\\
+			v(t_f) = 0 \, \text{m/s}\\
+			\omega(t_f) = 0 \, \text{rad/s}
+		\end{gathered}
+	\end{equation}
+	
+	Restrições laterais:
+	\begin{equation}
+		\begin{gathered}
+			-d_{max} \leq d(t) \leq d_{max} \\
+			-F_{max} \leq F(t) \leq F_{max}
+		\end{gathered}
+	\end{equation}
+	
+	% UAV
+	
+	\section{UAV}
+	
+	Função custo:
+	\begin{equation}
+		J = \int_{0}^{t_f} I(t) dt
+	\end{equation}
+	
+	\begin{equation}
+		J = K_i \, m \, g \int_{0}^{t_f} \frac{1}{cos \, \phi(t)} dt
+	\end{equation}
+	
+	
+	Dinâmica: 
+	\begin{equation}
+		\begin{gathered}
+			\dot{d}_x(t) = v_x(t) \\
+			\dot{d}_y(t) = v_x(t) \\
+			\dot{v}_x(t) = g \; tan \, \phi(t) \; cos \, \theta(t) - \frac{c_d}{m} \Big[ v_x(t) - c_x \big( d_x(t), d_y(t) \big) \Big] \\
+			\dot{v}_y(t) = g \; tan \, \phi(t) \; sen \, \theta(t) - \frac{c_d}{m} \Big[ v_y(t) - c_y \big( d_x(t), d_y(t) \big) \Big] 
+		\end{gathered}
+	\end{equation}
+	
+	Estados e controles:
+	\begin{equation}
+	x(t) = \begin{bmatrix} d_x(t) & d_y(t) & v_x(t) & v_y(t) \end{bmatrix}^T
+	\end{equation}
+	
+	\begin{equation}
+	u(t) = \begin{bmatrix} \phi(t) & \theta(t) \end{bmatrix}^T
+	\end{equation}
+	
+	Estado inicial:
+	\begin{equation}
+		\begin{gathered}
+			d_x(0) = 1 \, \text{m} \\
+			d_y(0) = 5 \, \text{m} \\
+			v_x(0) = 0 \, \text{m/s} \\
+			v_x(0) = 0 \, \text{m/s} \\
+		\end{gathered}
+	\end{equation}
+	
+	Estado final:
+	\begin{equation}
+		\big( d_x(t_f) - r_x \big)^2 + \big( p_y(t_f) - r_y \big)^2 \leq r
+	\end{equation}
+	
+	Restrições laterais:
+	\begin{equation}
+		\begin{gathered}
+			0 \text{ m} \leq d_x(t) \leq D_x \\
+			0 \text{ m} \leq d_y(t) \leq D_y \\
+			0 \text{ rad} \leq \phi(t) \leq \phi_{max} \\
+			-\pi \text{ rad} \leq \theta(t) \leq \pi \text{ rad}
+		\end{gathered}
+	\end{equation}
+	
+	\section{Foguete}
+	
+	Dinâmica: (OK)
+	\begin{equation}
+		\begin{gathered}
+			\dot{\mathbf{r}}(t) = \mathbf{v}(t) \\
+			\dot{\mathbf{v}}(t) = -\frac{\mu}{|\mathbf{r}(t)|^3} \mathbf{r}(t) + \frac{T}{m(t)} \mathbf{u}(t) + \frac{\mathbf{D}(t)}{m(t)} \\
+			\dot{m} = dm
+		\end{gathered}
+	\end{equation}
+	
+	Vetores utilizados: (OK)
+	\begin{equation}
+		\begin{gathered}
+			\mathbf{r}(t) = \begin{bmatrix} r_x(t) & r_y(t) & r_z(t) \end{bmatrix}^T \\
+			\mathbf{v}(t) = \begin{bmatrix} v_x(t) & v_y(t) & v_z(t) \end{bmatrix}^T \\
+			\mathbf{D}(t) = \begin{bmatrix} D_x(t) & D_y(t) & D_z(t) \end{bmatrix}^T \\
+			\mathbf{u}(t) = \begin{bmatrix} u_x(t) & u_y(t) & u_z(t) \end{bmatrix}^T 
+		\end{gathered}
+	\end{equation}
+	
+	Estados e controles: (OK)
+	\begin{equation}
+		\begin{gathered}
+			\mathbf{x}(t) = \begin{bmatrix} r_x(t) & r_y(t) & r_z(t) & v_x(t) & v_y(t) & v_z(t) & m(t) \end{bmatrix}^T \\ 
+			\mathbf{u}(t) = \begin{bmatrix} u_x(t) & u_y(t) & u_z(t) \end{bmatrix}^T
+		\end{gathered}
+	\end{equation}
+	
+	Arrasto: (OK)
+	\begin{equation}
+		\mathbf{D}(t) = -\frac{1}{2} \, c_d \, A_{ref} \, \rho \, |\mathbf{v_{ref}}(t)| \, \mathbf{v_{ref}}(t)
+	\end{equation}
+	
+	\begin{equation}
+		\mathbf{v_{ref}}(t) = \mathbf{v}(t) + {\bm \omega} \times \mathbf{r}(t)
+	\end{equation}
+	
+	\begin{equation}
+		{\bm \omega} = \begin{bmatrix} 0 & 0 & \omega_e \end{bmatrix}^T
+	\end{equation}
+	
+	\begin{equation}
+		\rho(t) = \rho_0 \, e^{-h(t)/h_0}
+	\end{equation}
+	
+	\begin{equation}
+		h(t) = |\mathbf{r}(t)| - R_e
+	\end{equation}
+	
+	Condições iniciais (OK):
+	\begin{equation}
+		\begin{gathered}
+			\mathbf{r}(0) = \mathbf{r_0} \\
+			\mathbf{v}(0) = \mathbf{v_0} \\
+			m(0) = m_0
+		\end{gathered}		
+	\end{equation}
+	
+	\begin{equation}
+	\mathbf{r}_0 = 
+	\begin{bmatrix}
+	r_{0x} \\
+	r_{0y} \\
+	r_{0z} 
+	\end{bmatrix} = 
+	\begin{bmatrix}
+	R_e \; cos \, l_{cc} \\
+	0 \\
+	R_e \; sen \, l_{cc}
+	\end{bmatrix} 
+	\end{equation}
+	
+	\begin{equation} 
+	\mathbf{v}_0 = {\bm \omega} \times \mathbf{r}_0
+	\end{equation}
+	
+	\begin{equation}
+		\mathbf{v}_0 = 
+		\begin{bmatrix}
+			v_{0x} \\
+			v_{0y} \\
+			v_{0z}
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			- r_{0y} \, w_e \\
+			r_{0x} \, w_e \\
+			0
+		\end{bmatrix}
+	\end{equation}
+	
+	Continuidade das posições e velocidades (OK):
+	\begin{equation}
+		\begin{gathered}
+			\mathbf{r}^{(2)} \left( t_0^{(2)} \right) = \mathbf{r}^{(1)} \left( t_f^{(1)} \right) \\
+			\mathbf{r}^{(3)} \left( t_0^{(3)} \right) = \mathbf{r}^{(2)} \left( t_f^{(2)} \right) \\
+			\mathbf{r}^{(4)} \left( t_0^{(4)} \right) = \mathbf{r}^{(3)} \left( t_f^{(3)} \right) 
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{gathered}
+			\mathbf{v}^{(2)} \left( t_0^{(2)} \right) = \mathbf{v}^{(1)} \left( t_f^{(1)} \right) \\
+			\mathbf{v}^{(3)} \left( t_0^{(3)} \right) = \mathbf{v}^{(2)} \left( t_f^{(2)} \right) \\
+			\mathbf{v}^{(4)} \left( t_0^{(4)} \right) = \mathbf{v}^{(3)} \left( t_f^{(3)} \right) 
+		\end{gathered}
+	\end{equation}
+	
+	Conexão entre fases: massa (OK)
+	\begin{equation}
+		\begin{gathered}
+			m^{(2)} \left( t_0^{(2)} \right)  = m^{(1)} \left( t_f^{(1)} \right) - \Delta m^{(1)} \\
+			m^{(3)} \left( t_0^{(3)} \right)  = m^{(2)} \left( t_f^{(2)} \right) - \Delta m^{(2)} \\
+			m^{(4)} \left( t_0^{(4)} \right)  = m^{(3)} \left( t_f^{(3)} \right) - \Delta m^{(3)} 			
+		\end{gathered}
+	\end{equation}
+	
+	Restrições terminais (OK)
+	\begin{equation}
+		\begin{gathered}
+			a(t_4) = a_f \\
+			e(t_4) = e_f \\
+			i(t_4) = i_f \\
+			\Omega(t_4) = \Omega_f \\
+			\omega(t_4) = \omega_f 
+		\end{gathered}
+	\end{equation}
+	
+	Palpites iniciais para posição e velocidade das últimas fases: 
+	\begin{equation}
+		\mathbf{r}_f = 
+		\begin{bmatrix}
+			r_{fx} \\
+			r_{fy} \\
+			r_{fz} 
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			4397,29 \\
+			4243,77 \\
+			2379,47 
+		\end{bmatrix} \text{ km}
+	\end{equation}
+	
+	\begin{equation}
+		\mathbf{v}_f = 
+		\begin{bmatrix}
+			v_{fx} \\
+			v_{fy} \\
+			v_{fz} 
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			-5826,69 \\
+			7819,62 \\
+			-3178,43
+		\end{bmatrix} \text{ m/s}
+	\end{equation}
+	
+	Conversão de posição e velocidade para coordenadas orbitais:
+	\begin{equation}
+		\begin{gathered}
+			\mathbf{h}(t) = \mathbf{r}(t) \times \mathbf{v}(t) \\
+			\mathbf{e'}(t) = \frac{\mathbf{v}(t) \times \mathbf{h}(t)}{\mu} - \frac{\mathbf{r}(t)}{|\mathbf{r}(t)|} \\
+			\mathbf{e'}(t) = \begin{bmatrix} e'_x(t) & e'_y(t) & e'_z(t) \end{bmatrix}^T \\
+			\mathbf{h}(t) = \begin{bmatrix} h_x(t) & h_y(t) & h_z(t) \end{bmatrix}^T \\
+			\mathbf{n}(t) = \begin{bmatrix} -h_y(t) & h_x(t) & 0 \end{bmatrix}^T \\
+			i(t) = cos^{-1} \frac{h_z(t)}{|\mathbf{h}(t)|} \\
+			e(t) = |\mathbf{e'}(t)| \\
+			a(t) = \frac{1}{ \cfrac{2}{|\mathbf{r}(t)|} - \cfrac{|\mathbf{v}(t)|^2}{\mu}} \\
+			\Omega(t) = \begin{cases}
+				cos^{-1} \cfrac{n_x(t)}{|\mathbf{n}(t)|} &\text{ se } n_y(t) \geq 0 \\
+				2 \pi - cos^{-1} \cfrac{n_x(t)}{|\mathbf{n}(t)|} &\text{ se } n_y(t) < 0
+			\end{cases} \\
+			\omega(t) = \begin{cases}
+				cos^{-1} \cfrac{\mathbf{n}(t) \bigcdot \mathbf{e'}(t)}{|\mathbf{n}(t)||\mathbf{e'}(t)|} &\text{ se } e'_z(t) \geq 0 \\
+				2 \pi - cos^{-1} \cfrac{\mathbf{n}(t) \bigcdot \mathbf{e'}(t)}{|\mathbf{n}(t)||\mathbf{e'}(t)|} &\text{ se } e'_z(t) < 0
+			\end{cases} 
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\Omega(t) = U_s\big( n_y(t) \big) \, cos^{-1} \frac{n_x(t)}{|\mathbf{n}(t)|} + U_s\big( -n_y(t) \big) \left( 2 \pi - cos^{-1} \frac{n_x(t)}{|\mathbf{n}(t)|} \right)
+	\end{equation}
+	
+	\begin{multline}
+		\omega(t) = U_s\big( e'_z(t) \big) \, cos^{-1} \cfrac{\mathbf{n}(t) \bigcdot \mathbf{e'}(t)}{|\mathbf{n}(t)||\mathbf{e'}(t)|} \hspace{0.1cm} + \\
+		U_s\big( -e'_z(t) \big) \left( 2 \pi - cos^{-1} \cfrac{\mathbf{n}(t) \bigcdot \mathbf{e'}(t)}{|\mathbf{n}(t)||\mathbf{e'}(t)|} \right)
+	\end{multline}
+	
+	\begin{equation}
+		U_s'(x) = 0,5 \left( 1 + tanh \left( \frac{x}{A} \right) \right)
+	\end{equation}
+	
+	Função objetivo (OK):
+	\begin{equation}
+		J = -m(t_4)
+	\end{equation}
+	
+	Restrições de caminho (OK): 
+	\begin{equation}
+		|\mathbf{r}(t)| \geq R_e	
+	\end{equation}
+	
+	\begin{equation}
+		|\mathbf{u}(t)| = 1
+	\end{equation}
+	
+	Restrições laterais: (OK)
+	\begin{equation}
+		\begin{gathered}
+			2 \, R_e \leq r_x(t) \leq 0 \\
+			2 \, R_e \leq r_y(t) \leq 0 \\
+			2 \, R_e \leq r_z(t) \leq 0
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{gathered}
+			-20000 \leq v_x(t) \leq 20000 \\
+			-20000 \, R_e \leq v_y(t) \leq 20000 \\
+			-20000 \, R_e \leq v_z(t) \leq 20000
+		\end{gathered}
+	\end{equation}
+
+	Constantes (OK):
+	\begin{equation}
+		\begin{gathered}
+			v_{0x} = 0 \text{ km} \\
+			v_{0y} = 408,74 \text{ m/s} \\
+			r_{0x} = 5605,2 \text{ km} \\
+			r_{0y} = 3043,4 \text{ km} \\
+			m_0 = 301454 \text{ kg} \\
+			\Delta m^{(1)} = 13680 \text{ kg} \\
+			\Delta m^{(2)} = 6840 \text{ kg} \\
+			\Delta m^{(3)} = 8830 \text{ kg} \\
+			A_{ref} = 4 \pi \text{ m$^2$} \\
+			c_d = 0,5 \\
+			\rho_0 = 1,225 \text{ kg/m$^3$} \\
+			h_0 = 7,2 \text{ km} \\
+			t_0 = 0 \text{ s} \\
+			t_1 = 75,2 \text{ s} \\
+			t_2 = 150,4 \text{ s} \\
+			t_3 = 261 \text{ s} \\
+			a_f = 24361,14 \text{ km} \\
+			e_f = 0,7308 \\
+			i_f = 28,5 \degree \\
+			\Omega_f = 269,8 \degree \\
+			\omega_f = 130,5 \degree \\
+		\end{gathered}
+	\end{equation}
+
+	Cálculo de $ I $ (OK):
+	\begin{equation}
+		\begin{gathered}
+			\delta m_{sb} = \frac{m_{sb}}{t_{sb}} \\
+			I_{sb} = \frac{T_{sb}}{g_0 \, \delta m_{sb}}
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{gathered}
+			\delta m_{s1} = \frac{m_{s1}}{t_{s1}} \\
+			I_{s1} = \frac{T_{s1}}{g_0 \, \delta m_{s1}}
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{gathered}
+			\delta m_{s2} = \frac{m_{s2}}{t_{s2}} \\
+			I_{s2} = \frac{T_{s2}}{g_0 \, \delta m_{s2}}
+		\end{gathered}
+	\end{equation}
+
+	Cálculo de $ dm $ (OK):
+	\begin{equation}
+		\begin{gathered}
+			dm_{sb} = \frac{T_{sb}}{g_0 \, I_{sb}} \\
+			dm_{s1} = \frac{T_{s1}}{g_0 \, I_{s1}} \\
+			dm_{s2} = \frac{T_{s2}}{g_0 \, I_{s2}}
+		\end{gathered}
+	\end{equation}
+	
+	$ T $ e $ dm $ de cada fase (OK):
+	\begin{equation}
+		\begin{gathered}
+			T^{(1)} = 6 \, T_{sb} + T_{s1} \\
+			dm^{(1)} = -6 \, dm_{sb} - dm_{s1}
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{gathered}
+			T^{(2)} = 3 \, T_{sb} + T_{s1} \\
+			dm^{(2)} = -3 \, dm_{sb} - dm_{s1}
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{gathered}
+			T^{(3)} = T_{s1} \\
+			dm^{(3)} = - dm_{s1}
+		\end{gathered}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{gathered}
+			T^{(4)} = T_{s2} \\
+			dm^{(4)} = - dm_{s2}
+		\end{gathered}
+	\end{equation}	
+	
+\end{document}

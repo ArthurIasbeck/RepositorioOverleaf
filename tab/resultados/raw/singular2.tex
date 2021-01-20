@@ -1,0 +1,15 @@
+\begin{table}[!h]
+	\centering
+	\caption[Métricas obtidas para o problema singular 2]{Métricas obtidas para o problema singular 2. Os melhores $ N_m $, $ J^* $, $ t_p $, $ n_{aval} $ e $ N_s\% $ se encontram destacados.}
+	\label{tab:singular2:raw}
+	\begin{tabular}{ccccccccc}
+		\hline
+		Método       & $N_m$                              & $J^*$                                   & $t_p$ {[}$s${]}                         & $s_t$ {[}$s${]} & $n_{aval}$                         & $\Delta c_{max}$                & $N_s$ & $N_s\%$                                  \\ \hline
+		$PSOPT_t$    & 50                                 & 0,75663                                 & 3,20295                                 & 0,08123         & 924                                & 3,12e-11                        & 27    & 90,00\%                                  \\
+		$PSOPT_h$    & 50                                 & {\color[HTML]{009901} \textbf{0,75393}} & 3,50511                                 & 0,08317         & 1060                               & 4,16e-09                        & 25    & 83,33\%                                  \\
+		$PSOPT_l$    & 110                                & 0,75399                                 & 15,91228                                & 0,16007         & 214                                & 1,16e-07                        & 24    & 80,00\%                                  \\
+		$FALCON$     & 45                                 & 0,75720                                 & {\color[HTML]{009901} \textbf{0,37631}} & 0,04386         & {\color[HTML]{009901} \textbf{76}} & 2,36e-09                        & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_t$ & 45                                 & 0,75720                                 & 17,77565                                & 0,37422         & 37149                              & 3,32e-12                        & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_h$ & {\color[HTML]{009901} \textbf{30}} & 0,75397                                 & 34,27460                                & 0,41814         & 105399                             & {\color[HTML]{000000} 1,63e-12} & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\ \hline
+	\end{tabular}
+\end{table}

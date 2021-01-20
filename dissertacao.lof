@@ -1,0 +1,123 @@
+\babel@toc {brazil}{}
+\babel@toc {brazil}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Sistema de controle em malha fechada}}{25}{figure.1.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Trajetória ótima a ser percorrida por uma aeronave para que um determinado ponto de chegada seja atingido}}{26}{figure.1.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Giroscópios da ISS}}{27}{figure.1.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Mapa que mostra o número de indivíduos infectados pela COVID-19 em várias regiões do mundo}}{28}{figure.1.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Representação do problema da braquistócrona}}{31}{figure.2.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Representação do processo de discretização em Métodos Diretos}}{37}{figure.2.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Representação da trajetória considerando que os controles são lineares}}{40}{figure.2.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Representação da trajetória do controle com quatro nós de colocação}}{41}{figure.2.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Representação da trajetória do estado considerando uma aproximação de terceiro grau}}{42}{figure.2.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Representação da trajetória do estado considerando quatro nós de colocação}}{44}{figure.2.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Representação da trajetória do controle considerando aproximações quadráticas}}{47}{figure.2.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Representação da trajetória do controle considerando quatro nós de colocação}}{48}{figure.2.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Representação dos nós LGL}}{50}{figure.2.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Relação entre $ N $ e os $ J^* $ atribuídos a dois pacotes quaisquer A e B}}{63}{figure.3.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Representação do processo de normalização de $ J^* $ e da definição de $ \epsilon _m $}}{64}{figure.3.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Representação esquemática do problema do bloco}}{68}{figure.4.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Influência do número de nós de colocação no valor da função objetivo para o problema da aceleração de um bloco}}{69}{figure.4.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Variável de estado $d(t)$ para o problema da aceleração de um bloco}}{71}{figure.4.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Variável de estado $v(t)$ para o problema da aceleração de um bloco}}{72}{figure.4.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Variável de controle $F(t)$ para o problema da aceleração de um bloco}}{73}{figure.4.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Relação entre o tempo de processamento e o número de nós de colocação para o problema da aceleração de um bloco}}{74}{figure.4.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Relação entre o número de avaliações da função objetivo e o número de nós de colocação para o problema da aceleração de um bloco}}{75}{figure.4.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Solução do problema singular 1 reportada na literatura}}{76}{figure.4.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Solução do problema singular 2 reportada na literatura}}{76}{figure.4.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Influência do número de nós de colocação no valor da função objetivo para o problema singular 1}}{78}{figure.4.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Variável de estado $x_1(t)$ para o problema singular 1}}{80}{figure.4.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Variável de estado $x_2(t)$ para o problema singular 1}}{81}{figure.4.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Variável de estado $x_3(t)$ para o problema singular 1}}{82}{figure.4.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Variável de estado $u(t)$ para o problema singular 1}}{83}{figure.4.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Relação entre o tempo de processamento e o número de nós de colocação para o problema singular 1}}{84}{figure.4.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Relação entre o número de avaliações da função objetivo e o número de nós de colocação para o problema singular 1}}{85}{figure.4.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Influência do número de nós de colocação no valor da função objetivo para o problema singular 2}}{86}{figure.4.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Variável de estado $x_1(t)$ para o problema singular 2}}{89}{figure.4.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Variável de estado $x_2(t)$ para o problema singular 2}}{90}{figure.4.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Variável de estado $x_3(t)$ para o problema singular 2}}{91}{figure.4.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Variável de controle $u(t)$ para o problema singular 2}}{92}{figure.4.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Relação entre o tempo de processamento e o número de nós de colocação para o problema singular 2}}{93}{figure.4.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Relação entre o número de avaliações da função objetivo e o número de nós de colocação para o problema singular 2}}{94}{figure.4.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Representação esquemática de um pêndulo invertido}}{95}{figure.4.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Posições inicial e final definidas pra o problema do pêndulo invertido}}{96}{figure.4.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Influência do número de nós de colocação no valor da função objetivo para o problema do pêndulo invertido}}{98}{figure.4.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Variável de estado $d(t)$ para o problema do pêndulo}}{100}{figure.4.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Variável de estado $\theta (t)$ para o problema do pêndulo}}{101}{figure.4.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Variável de estado $v(t)$ para o problema do pêndulo}}{102}{figure.4.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Variável de estado $\omega (t)$ para o problema do pêndulo}}{103}{figure.4.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Variável de controle $F(t)$ para o problema do pêndulo}}{104}{figure.4.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Algumas posições do pêndulo invertido durante a execução da manobra de \textit {swing-up}}}{105}{figure.4.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Relação entre o tempo de processamento e o número de nós de colocação para o problema do pêndulo invertido}}{106}{figure.4.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Relação entre o número de avaliações da função objetivo e o número de nós de colocação para o problema do pêndulo invertido}}{107}{figure.4.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Aproximações lineares para a avaliação de integrais usando quadratura trapezoidal ($ N = 7 $) no $ FALCON $}}{108}{figure.4.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Aproximações lineares para a avaliação de integrais usando quadratura trapezoidal ($ N = 9 $) no $ FALCON $}}{108}{figure.4.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Aproximações lineares para a avaliação de integrais usando quadratura trapezoidal ($ N = 11 $) no $ FALCON $}}{109}{figure.4.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Relação entre o valor atribuído a função objetivo via quadratura trapezoidal em função do número de nós de colocação}}{109}{figure.4.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Função objetivo via quadratura de Simpson para o problema do pêndulo invertido ($N$=7)}}{110}{figure.4.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Função objetivo via quadratura de Simpson para o problema do pêndulo invertido ($N$=9)}}{110}{figure.4.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Função objetivo via quadratura de Simpson para o problema do pêndulo invertido ($N$=11)}}{110}{figure.4.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Relação entre o valor da função objetivo via quadratura de Simpson e o número de nós de colocação para o problema do pêndulo invertido}}{111}{figure.4.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Representação esquemática do problema do estacionamento}}{112}{figure.4.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Representação das posições inicial e final do automóvel bem como das dimensões da via e da vaga}}{112}{figure.4.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Trajetórias de controle associadas ao problema do estacionamento reportadas na literatura}}{113}{figure.4.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Situação em que o veículo se choca com os limites da vaga}}{115}{figure.4.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Representação gráfica da aproximação adotada na representação dos limites da vaga}}{116}{figure.4.62}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Representação das funções empregadas na aproximação da função módulo}}{118}{figure.4.63}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Representação das funções empregadas na reformulação da restrição que evita o choque entre o veículo e a vaga}}{119}{figure.4.64}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Influência do número de nós de colocação no valor da função objetivo para o problema do estacionamento}}{120}{figure.4.65}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Variável de estado $d_x(t)$ para o problema do estacionamento}}{123}{figure.4.66}%
+\contentsline {figure}{\numberline {67}{\ignorespaces Variável de estado $d_y(t)$ para o problema do estacionamento}}{124}{figure.4.67}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Variável de estado $v(t)$ para o problema do estacionamento}}{125}{figure.4.68}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Variável de estado $a(t)$ para o problema do estacionamento}}{126}{figure.4.69}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Variável de estado $\theta (t)$ para o problema do estacionamento}}{127}{figure.4.70}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Variável de estado $\phi (t)$ para o problema do estacionamento}}{128}{figure.4.71}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Variável de controle $j(t)$ para o problema do estacionamento}}{129}{figure.4.72}%
+\contentsline {figure}{\numberline {73}{\ignorespaces Variável de controle $\omega (t)$ para o problema do estacionamento}}{130}{figure.4.73}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Representação de algumas das posições assumidas pelo veículo durante a execução da manobra de estacionamento}}{132}{figure.4.74}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Relação entre o tempo de processamento e o número de nós de colocação para o problema do estacionamento}}{133}{figure.4.75}%
+\contentsline {figure}{\numberline {76}{\ignorespaces Relação entre o número de avaliações da função objetivo e o número de nós de colocação para o problema do estacionamento}}{134}{figure.4.76}%
+\contentsline {figure}{\numberline {77}{\ignorespaces Representação esquemática do problema do UAV}}{136}{figure.4.77}%
+\contentsline {figure}{\numberline {78}{\ignorespaces Campo de vento ao qual o UAV está submetido}}{137}{figure.4.78}%
+\contentsline {figure}{\numberline {79}{\ignorespaces Representação das variáveis utilizadas na definição da favorabilidade}}{138}{figure.4.79}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Velocidades e favorabilidades associadas ao campo de vento}}{139}{figure.4.80}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Influência do número de nós de colocação no valor da função objetivo para o problema do UAV}}{141}{figure.4.81}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Trajetória do ângulo associado à projeção da força de sustentação no eixo $xy$ obtida utilizando-se 23 nós de colocação}}{143}{figure.4.82}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Trajetória do ângulo associado à projeção da força de sustentação no eixo $xy$ obtida utilizando-se 41 nós de colocação}}{143}{figure.4.83}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Variável de estado $d_x(t)$ para o problema do UAV}}{145}{figure.4.84}%
+\contentsline {figure}{\numberline {85}{\ignorespaces Variável de estado $d_y(t)$ para o problema do UAV}}{146}{figure.4.85}%
+\contentsline {figure}{\numberline {86}{\ignorespaces Variável de estado $v_x(t)$ para o problema do UAV}}{147}{figure.4.86}%
+\contentsline {figure}{\numberline {87}{\ignorespaces Variável de estado $v_y(t)$ para o problema do UAV}}{148}{figure.4.87}%
+\contentsline {figure}{\numberline {88}{\ignorespaces Variável de controle $\phi (t)$ para o problema do UAV}}{149}{figure.4.88}%
+\contentsline {figure}{\numberline {89}{\ignorespaces Variável de controle $\theta (t)$ para o problema do UAV}}{150}{figure.4.89}%
+\contentsline {figure}{\numberline {90}{\ignorespaces Vista superior da trajetória do UAV e campo de vento que atua sob o mesmo}}{151}{figure.4.90}%
+\contentsline {figure}{\numberline {91}{\ignorespaces Relação entre o tempo de processamento e o número de nós de colocação para o problema do UAV}}{152}{figure.4.91}%
+\contentsline {figure}{\numberline {92}{\ignorespaces Relação entre o número de avaliações da função objetivo e o número de nós de colocação para o problema do estacionamento}}{153}{figure.4.92}%
+\contentsline {figure}{\numberline {93}{\ignorespaces Representação esquemática do problema do lançamento de um foguete}}{155}{figure.4.93}%
+\contentsline {figure}{\numberline {94}{\ignorespaces Sistema de coordenadas inercial centrado na Terra}}{156}{figure.4.94}%
+\contentsline {figure}{\numberline {95}{\ignorespaces Posicionamento de um ponto qualquer na superfície terrestre utilizando-se a latitude e a longitude}}{158}{figure.4.95}%
+\contentsline {figure}{\numberline {96}{\ignorespaces Representação dos elementos orbitais}}{161}{figure.4.96}%
+\contentsline {figure}{\numberline {97}{\ignorespaces Influência do número de nós de colocação no valor da função objetivo para o problema do lançamento de um foguete}}{166}{figure.4.97}%
+\contentsline {figure}{\numberline {98}{\ignorespaces Variável $h(t)$ para o problema do lançamento de um foguete}}{168}{figure.4.98}%
+\contentsline {figure}{\numberline {99}{\ignorespaces Variável $m(t)$ para o problema do lançamento de um foguete}}{169}{figure.4.99}%
+\contentsline {figure}{\numberline {100}{\ignorespaces Variável $v(t)$ para o problema do lançamento de um foguete}}{170}{figure.4.100}%
+\contentsline {figure}{\numberline {101}{\ignorespaces Variável de controle $u_x(t)$ para o problema do lançamento de um foguete}}{171}{figure.4.101}%
+\contentsline {figure}{\numberline {102}{\ignorespaces Variável de controle $u_y(t)$ para o problema do lançamento de um foguete}}{172}{figure.4.102}%
+\contentsline {figure}{\numberline {103}{\ignorespaces Variável de controle $u_z(t)$ para o problema do lançamento de um foguete}}{173}{figure.4.103}%
+\contentsline {figure}{\numberline {104}{\ignorespaces Trajetória percorrida pelo Delta III}}{174}{figure.4.104}%
+\contentsline {figure}{\numberline {105}{\ignorespaces Relação entre o tempo de processamento e o número de nós de colocação para o problema do lançamento de um foguete}}{175}{figure.4.105}%
+\contentsline {figure}{\numberline {106}{\ignorespaces Relação entre o número de avaliações da função objetivo e o número de nós de colocação para o problema do lançamento de um foguete}}{176}{figure.4.106}%
+\contentsline {figure}{\numberline {107}{\ignorespaces Representação da aproximação utilizada na suavização da função degrau}}{178}{figure.4.107}%
+\contentsline {figure}{\numberline {108}{\ignorespaces Avaliação do número de nós de colocação atribuídos ao $ PSOPT_t $, ao $ PSOPT_h $ e ao $ PSOPT_l $}}{180}{figure.4.108}%
+\contentsline {figure}{\numberline {109}{\ignorespaces Avaliação dos tempos de processamento atribuídos ao $ PSOPT_t $, ao $ PSOPT_h $ e ao $ PSOPT_l $}}{181}{figure.4.109}%
+\contentsline {figure}{\numberline {110}{\ignorespaces Análise do número de avaliações da função objetivo atribuídos ao $ PSOPT_t $, ao $ PSOPT_h $ e ao $ PSOPT_l $}}{182}{figure.4.110}%
+\contentsline {figure}{\numberline {111}{\ignorespaces Avaliação do número de nós de colocação atribuídos ao $ COPILOTS_t $ e ao $ COPILOTS_h $}}{183}{figure.4.111}%
+\contentsline {figure}{\numberline {112}{\ignorespaces Avaliação do número de nós de colocação atribuídos ao $ PSOPT_t $ e ao $ PSOPT_h $}}{184}{figure.4.112}%
+\contentsline {figure}{\numberline {113}{\ignorespaces Avaliação dos tempos de processamento atribuídos a todos os pacotes avaliados}}{186}{figure.4.113}%
+\contentsline {figure}{\numberline {114}{\ignorespaces Análise do número de avaliações da função objetivo atribuídas a todos os pacotes avaliados}}{187}{figure.4.114}%
+\contentsline {figure}{\numberline {115}{\ignorespaces Avaliação dos tempos de processamentos atribuídos ao $ PSOPT_t $ e o $ FALCON $, para o problema do pêndulo invertido, considerando-se um número de nós de colocação razoavelmente alto}}{188}{figure.4.115}%
+\contentsline {figure}{\numberline {116}{\ignorespaces Análise das avaliações da função objetivo atribuídas ao $ PSOPT_t $ e o $ FALCON $, para o problema do pêndulo invertido, considerando-se um número de nós de colocação razoavelmente alto}}{188}{figure.4.116}%
+\contentsline {figure}{\numberline {117}{\ignorespaces Avaliação dos valores ótimos da função objetivo atribuídos a todos os pacotes avaliados}}{190}{figure.4.117}%
+\contentsline {figure}{\numberline {118}{\ignorespaces Trajetórias de controle obtidas pelo emprego do $ PSOPT_t $ na resolução do problema do estacionamento}}{198}{figure.4.118}%
+\contentsline {figure}{\numberline {119}{\ignorespaces Suavização das trajetórias de controle obtidas pelo emprego do $ PSOPT_t $ na resolução do problema do estacionamento}}{198}{figure.4.119}%
+\contentsline {figure}{\numberline {120}{\ignorespaces Suavização das trajetórias de controle obtidas pelo emprego do $ PSOPT_t $ na resolução do problema singular 2}}{199}{figure.4.120}%
+\contentsline {figure}{\numberline {121}{\ignorespaces Trajetórias de controle advindas da resolução do problema singular 1 a partir do emprego do $ PSOPT_l $ e do $ FALCON $}}{203}{figure.5.121}%

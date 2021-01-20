@@ -1,0 +1,15 @@
+\begin{table}
+	\centering
+	\caption[Métricas obtidas para o problema da aceleração de um bloco]{Métricas obtidas para o problema da aceleração de um bloco. Os melhores valores para $ N_m $, $ J^* $, $ t_p $, $ n_{aval} $ e $ N_s\% $ encontram-se destacados.}
+	\label{tab:integrador:raw}
+	\begin{tabular}{@{}ccccccccc@{}}
+		\toprule
+		Método       & $N_m$                             & $J^*$                                    & $t_p$ {[}$s${]}                         & $s_t$ {[}$s${]} & $n_{aval}$                        & $\Delta c_{max}$                         & $N_s$ & $N_s\%$                                  \\ \midrule
+		$PSOPT_t$    & 35                                & 28,09170                                 & 0,31331                                 & 0,00625         & 8                                 & 6,41e-15                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$PSOPT_h$    & {\color[HTML]{009901} \textbf{5}} & {\color[HTML]{009901} \textbf{28,00000}} & 0,05395                                 & 0,00747         & 15                                & 4,44e-16                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$PSOPT_l$    & {\color[HTML]{009901} \textbf{5}} & {\color[HTML]{009901} \textbf{28,00000}} & 0,03791                                 & 0,00977         & {\color[HTML]{009901} \textbf{5}} & 7,77e-16                                 & 27    & 90,00\%                                  \\
+		$FALCON$     & 35                                & 28,09167                                 & {\color[HTML]{009901} \textbf{0,03663}} & 0,00279         & 6                                 & 2,08e-16 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_t$ & 35                                & 28,09167                                 & 0,52875                                 & 0,01817         & 1404                              & 1,57e-13                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$COPILOTS_h$ & {\color[HTML]{009901} \textbf{5}} & {\color[HTML]{009901} \textbf{28,00000}} & 0,18729                                 & 0,01770         & 600                               & 3,05e-13                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\ \bottomrule
+	\end{tabular}
+\end{table}

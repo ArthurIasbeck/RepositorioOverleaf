@@ -1,0 +1,15 @@
+\begin{table}[!h]
+	\centering
+	\caption[Métricas  obtidas  para  o  problema da otimização da trajetória de um UAV]{Métricas  obtidas  para  o  problema da otimização da trajetória de um UAV. Os melhores valores assumidos pelas métricas $ N_m $, $ J^* $, $ t_p $, $ n_{aval} $ e $ N_s\% $ estão em destaque.}
+	\label{tab:uav:raw}
+	\begin{tabular}{@{}ccccccccc@{}}
+		\toprule
+		Método       & $N_m$                              & $J^*$                                    & $t_p$ {[}$s${]}                         & $s_t$ {[}$s${]} & $n_{aval}$                          & $\Delta c_{max}$                         & $N_s$ & $N_s\%$                                  \\ \midrule
+		$PSOPT_t$    & 65                                 & 75,16400                                 & 2,20747                                 & 0,23441         & {\color[HTML]{009901} \textbf{167}} & 6,97e-08                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$PSOPT_h$    & 23                                 & 75,22300                                 & {\color[HTML]{009901} \textbf{1,16775}} & 0,03329         & 360                                 & 7,63e-07                                 & 30    & {\color[HTML]{009901} \textbf{100,00\%}} \\
+		$PSOPT_l$    & 65                                 & 75,24280                                 & 15,66657                                & 0,25870         & 800                                 & 4,08e-07                                 & 19    & 63,33\%                                  \\
+		$FALCON$     & 53                                 & 75,14907                                 & 1,76303                                 & 0,03821         & 357                                 & 1,94e-10                                 & 27    & 90,00\%                                  \\
+		$COPILOTS_t$ & 53                                 & 75,14907                                 & 587,37797                               & 0,71652         & 30821                               & 9,00e-09                                 & 9     & 30,00\%                                  \\
+		$COPILOTS_h$ & {\color[HTML]{009901} \textbf{17}} & {\color[HTML]{009901} \textbf{75,14254}} & 238,48976                               & 0,58730         & 11860                               & 1,52e-10 & 3     & 10,00\%                                  \\ \bottomrule
+	\end{tabular}
+\end{table}
